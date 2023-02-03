@@ -1,0 +1,689 @@
+Date: Fri, 3 Feb 2023 16:32:55 +0000 (UTC)
+Message-ID: <1415653473.11.1675441975560@9847c1dbd81e>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_10_873203683.1675441975560"
+
+------=_Part_10_873203683.1675441975560
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>Salesforce DX: Continuous Integration with Travis CI</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: #fff !important;
+        color: #000 !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: #000;
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        page-break-after: avoid;
+    }
+
+    pre {
+        font-family: Monaco, "Courier New", monospace;
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>Salesforce DX: Continuous Integration with Travis CI</h1>
+    <div class=3D"Section1">
+        <h3 id=3D"SalesforceDX:ContinuousIntegrationwithTravisCI-SetupSales=
+forceDXwithTravisCI:"><em>Setup Salesforce DX with Travis CI:</em></h3>
+<p><img class=3D"emoticon emoticon-blue-star" data-emoji-id=3D"1f408-200d-2=
+b1b" data-emoji-shortname=3D":black_cat:" data-emoji-fallback=3D"=F0=9F=90=
+=88=E2=80=8D=E2=AC=9B" src=3D"09f393c94d52dabab34c3020654c7eef" width=3D"16=
+" height=3D"16" data-emoticon-name=3D"blue-star" alt=3D"(blue star)"> <a hr=
+ef=3D"#git" rel=3D"nofollow">GitHub repository setup with Travis CI</a></p>
+<p><img class=3D"emoticon emoticon-blue-star" data-emoji-id=3D"1f477-200d-2=
+642-fe0f" data-emoji-shortname=3D":man_construction_worker:" data-emoji-fal=
+lback=3D"=F0=9F=91=B7=E2=80=8D=E2=99=82=EF=B8=8F" src=3D"aa13dae66192d0f614=
+e8a5c13079d6b9" width=3D"16" height=3D"16" data-emoticon-name=3D"blue-star"=
+ alt=3D"(blue star)"> <a href=3D"#travis" rel=3D"nofollow">Install Travis C=
+LI</a></p>
+<p><img class=3D"emoticon emoticon-blue-star" data-emoji-id=3D"1f50f" data-=
+emoji-shortname=3D":lock_with_ink_pen:" data-emoji-fallback=3D"=F0=9F=94=8F=
+" src=3D"b763406b905ad552ce3c87e83ac6a92a" width=3D"16" height=3D"16" data-=
+emoticon-name=3D"blue-star" alt=3D"(blue star)"> <a href=3D"#ssl" rel=3D"no=
+follow">Create a Self-Signed SSL Certificate</a></p>
+<p style=3D"margin-left: 60.0px;">=E2=86=92 <a href=3D"#ssl" rel=3D"nofollo=
+w">Prerequisites</a></p>
+<p style=3D"margin-left: 60.0px;">=E2=86=92 <a href=3D"#key" rel=3D"nofollo=
+w">Generate private key and certificate signing request</a></p>
+<p style=3D"margin-left: 60.0px;">=E2=86=92 <a href=3D"#cert" rel=3D"nofoll=
+ow">Generate SSL certificate</a></p>
+<p><img class=3D"emoticon emoticon-blue-star" data-emoji-id=3D"2601" data-e=
+moji-shortname=3D":cloud:" data-emoji-fallback=3D"=E2=98=81=EF=B8=8F" src=
+=3D"91ad4e2afdb89633ad70f4c54ea05ad1" width=3D"16" height=3D"16" data-emoti=
+con-name=3D"blue-star" alt=3D"(blue star)"> <a href=3D"#sf" rel=3D"nofollow=
+">Install Salesforce CLI</a></p>
+<p><img class=3D"emoticon emoticon-blue-star" data-emoji-id=3D"1f510" data-=
+emoji-shortname=3D":closed_lock_with_key:" data-emoji-fallback=3D"=F0=9F=94=
+=90" src=3D"3fb37cc2651d3d2ea05ebc098b209c94" width=3D"16" height=3D"16" da=
+ta-emoticon-name=3D"blue-star" alt=3D"(blue star)"> <a href=3D"#jwt" rel=3D=
+"nofollow">Setup JWT-based auth</a></p>
+<p style=3D"margin-left: 60.0px;">=E2=86=92 <a href=3D"#jwt" rel=3D"nofollo=
+w">Create a connected app, and configure it for Salesforce DX</a></p>
+<p style=3D"margin-left: 60.0px;">=E2=86=92 <a href=3D"#auth" rel=3D"nofoll=
+ow">Authorize an Org Using the JWT Bearer Flow</a> </p>
+<p><img class=3D"emoticon emoticon-blue-star" data-emoji-id=3D"1f60e" data-=
+emoji-shortname=3D":sunglasses:" data-emoji-fallback=3D"=F0=9F=98=8E" src=
+=3D"58b7e2d846f92513d3fe8e219901ce4e" width=3D"16" height=3D"16" data-emoti=
+con-name=3D"blue-star" alt=3D"(blue star)"> <a href=3D"#try" rel=3D"nofollo=
+w">Try out!</a> <span class=3D"confluence-anchor-link" id=3D"SalesforceDX:C=
+ontinuousIntegrationwithTravisCI-git"><span class=3D"confluence-anchor-link=
+" id=3D"git"></span></span></p>
+<h1 id=3D"SalesforceDX:ContinuousIntegrationwithTravisCI-GitHubrepositoryse=
+tupwithTravisCI"><img class=3D"emoticon emoticon-blue-star" data-emoji-id=
+=3D"1f408-200d-2b1b" data-emoji-shortname=3D":black_cat:" data-emoji-fallba=
+ck=3D"=F0=9F=90=88=E2=80=8D=E2=AC=9B" src=3D"09f393c94d52dabab34c3020654c7e=
+ef" width=3D"16" height=3D"16" data-emoticon-name=3D"blue-star" alt=3D"(blu=
+e star)"> GitHub repository setup with Travis CI</h1>
+<ul>
+<li><p> Go to&nbsp;<a href=3D"https://travis-ci.com/" class=3D"external-lin=
+k" rel=3D"nofollow">Travis-ci.com</a>&nbsp;and&nbsp;<em>Sign up with GitHub=
+</em>.</p></li>
+<li><p>Accept the Authorization of Travis CI. You=E2=80=99ll be redirected =
+to GitHub. For any doubts about the Travis CI GitHub Authorized OAuth App a=
+ccess rights message, please read <a href=3D"https://docs.travis-ci.com/use=
+r/tutorial#travis-ci-github-oauth-app-access-rights" class=3D"external-link=
+" rel=3D"nofollow">more</a>.</p></li>
+<li><p>Click on your profile picture in the top right of your Travis Dashbo=
+ard, click Settings, and then the green&nbsp;<em>Activate</em>&nbsp;button,=
+ and select the repositories you want to use with Travis CI. </p></li>
+</ul>
+<div class=3D"panel" style=3D"background-color: #EAE6FF;border-color: #998D=
+D9;border-width: 1px;">
+<div class=3D"panelContent" style=3D"background-color: #EAE6FF;">=20
+<p><em>Or you click the Activate all repositories using GitHub Apps button =
+on the getting started page to just activate all your repos</em></p>=20
+</div>
+</div>
+<p><span class=3D"confluence-anchor-link" id=3D"SalesforceDX:ContinuousInte=
+grationwithTravisCI-travis"><span class=3D"confluence-anchor-link" id=3D"tr=
+avis"></span></span></p>
+<h1 id=3D"SalesforceDX:ContinuousIntegrationwithTravisCI-InstallTravisCLI">=
+<img class=3D"emoticon emoticon-blue-star" data-emoji-id=3D"1f477-200d-2642=
+-fe0f" data-emoji-shortname=3D":man_construction_worker:" data-emoji-fallba=
+ck=3D"=F0=9F=91=B7=E2=80=8D=E2=99=82=EF=B8=8F" src=3D"aa13dae66192d0f614e8a=
+5c13079d6b9" width=3D"16" height=3D"16" data-emoticon-name=3D"blue-star" al=
+t=3D"(blue star)"> Install Travis CLI</h1>
+<ul>
+<li><p>Install Ruby Installer for Windows <a href=3D"https://rubyinstaller.=
+org/downloads/" data-card-appearance=3D"inline" class=3D"external-link" rel=
+=3D"nofollow">https://rubyinstaller.org/downloads/</a> with Devkit.</p></li=
+>
+<li><p>Run the .exe file and finish the installation.</p></li>
+<li><p>Check your Ruby version by running&nbsp;<code>ruby -v</code></p></li=
+>
+<li><p>Then run <code>gem install travis</code> to install Travis CLI</p></=
+li>
+<li><p>Now make sure everything is working <code>travis version</code> <spa=
+n class=3D"confluence-anchor-link" id=3D"SalesforceDX:ContinuousIntegration=
+withTravisCI-ssl"><span class=3D"confluence-anchor-link" id=3D"ssl"></span>=
+</span></p></li>
+</ul>
+<h1 id=3D"SalesforceDX:ContinuousIntegrationwithTravisCI-CreateaSelf-Signed=
+SSLCertificate"><img class=3D"emoticon emoticon-blue-star" data-emoji-id=3D=
+"1f50f" data-emoji-shortname=3D":lock_with_ink_pen:" data-emoji-fallback=3D=
+"=F0=9F=94=8F" src=3D"b763406b905ad552ce3c87e83ac6a92a" width=3D"16" height=
+=3D"16" data-emoticon-name=3D"blue-star" alt=3D"(blue star)"> Create a Self=
+-Signed SSL Certificate </h1>
+<h2 id=3D"SalesforceDX:ContinuousIntegrationwithTravisCI-Prerequisites">Pre=
+requisites</h2>
+<ul>
+<li><p>Install OpenSSL <a href=3D"https://slproweb.com/products/Win32OpenSS=
+L.html" class=3D"external-link" rel=3D"nofollow">OpenSSL Installer for Wind=
+ows</a> </p></li>
+<li><p>Setup bin level environment variable</p></li>
+<li><p>Run <code>openssl</code> to see if installed <span class=3D"confluen=
+ce-anchor-link" id=3D"SalesforceDX:ContinuousIntegrationwithTravisCI-key"><=
+span class=3D"confluence-anchor-link" id=3D"key"></span></span></p></li>
+</ul>
+<h2 id=3D"SalesforceDX:ContinuousIntegrationwithTravisCI-Generateprivatekey=
+andcertificatesigningrequest">Generate private key and certificate signing =
+request</h2>
+<p>A private key and certificate signing request are required to create an =
+SSL certificate. These can be generated with a few simple commands.</p>
+<p>Create a folder in C drive, open cmd inside the folder and run the below=
+ command one by one.</p>
+<p>When the <code>openssl req</code> command asks for a =E2=80=9Cchallenge =
+password=E2=80=9D, just press return, leaving the password empty. This pass=
+word is used by Certificate Authorities to authenticate the certificate own=
+er when they want to revoke their certificate. Since this is a self-signed =
+certificate, there=E2=80=99s no way to revoke it via CRL (Certificate Revoc=
+ation List).</p>
+<div class=3D"confluence-information-macro confluence-information-macro-inf=
+ormation">
+<span class=3D"aui-icon aui-icon-small aui-iconfont-info confluence-informa=
+tion-macro-icon"></span>
+<div class=3D"confluence-information-macro-body">
+<p>More detailed instructions can be found in <a href=3D"https://devcenter.=
+heroku.com/articles/ssl-endpoint#acquire-ssl-certificate" class=3D"external=
+-link" rel=3D"nofollow"><u>Creating an SSL Certificate Signing Request</u><=
+/a>.</p>
+</div>
+</div>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: java; gutter: false; theme: Confluence" data-theme=3D"Confluence">$ opens=
+sl genrsa -aes256 -passout pass:gsahdg -out server.pass.key 4096
+...
+$ openssl rsa -passin pass:gsahdg -in server.pass.key -out server.key
+writing RSA key
+$ rm server.pass.key
+$ openssl req -new -key server.key -out server.csr
+...
+Country Name (2 letter code) [AU]:US
+State or Province Name (full name) [Some-State]:California
+...
+A challenge password []:
+...</pre>=20
+</div>
+</div>
+<p><span class=3D"confluence-anchor-link" id=3D"SalesforceDX:ContinuousInte=
+grationwithTravisCI-cert"><span class=3D"confluence-anchor-link" id=3D"cert=
+"></span></span></p>
+<h2 id=3D"SalesforceDX:ContinuousIntegrationwithTravisCI-GenerateSSLcertifi=
+cate">Generate SSL certificate </h2>
+<p>The self-signed SSL certificate is generated from the <code>server.key</=
+code> private key and <code>server.csr</code> files.</p>
+<p><code>openssl x509 -req -sha256 -days 365 -in server.csr -signkey server=
+.key -out server.crt</code></p>
+<p>The <code>server.crt</code> file is your site certificate suitable for u=
+se along with the <code>server.key</code> private key. <span class=3D"confl=
+uence-anchor-link" id=3D"SalesforceDX:ContinuousIntegrationwithTravisCI-sf"=
+><span class=3D"confluence-anchor-link" id=3D"sf"></span></span></p>
+<h1 id=3D"SalesforceDX:ContinuousIntegrationwithTravisCI-InstallSalesforceC=
+LI"><img class=3D"emoticon emoticon-blue-star" data-emoji-id=3D"2601" data-=
+emoji-shortname=3D":cloud:" data-emoji-fallback=3D"=E2=98=81=EF=B8=8F" src=
+=3D"91ad4e2afdb89633ad70f4c54ea05ad1" width=3D"16" height=3D"16" data-emoti=
+con-name=3D"blue-star" alt=3D"(blue star)"> Install Salesforce CLI</h1>
+<p>Make sure you have the Salesforce CLI installed. Check by running <code>=
+sfdx force --help</code> and confirm you see the command output. If you don=
+'t have it installed you can download and install it from <a href=3D"https:=
+//developer.salesforce.com/tools/sfdxcli" class=3D"external-link" rel=3D"no=
+follow">here</a>. <span class=3D"confluence-anchor-link" id=3D"SalesforceDX=
+:ContinuousIntegrationwithTravisCI-jwt"><span class=3D"confluence-anchor-li=
+nk" id=3D"jwt"></span></span></p>
+<h1 id=3D"SalesforceDX:ContinuousIntegrationwithTravisCI-SetupJWT-basedauth=
+"><img class=3D"emoticon emoticon-blue-star" data-emoji-id=3D"1f510" data-e=
+moji-shortname=3D":closed_lock_with_key:" data-emoji-fallback=3D"=F0=9F=94=
+=90" src=3D"3fb37cc2651d3d2ea05ebc098b209c94" width=3D"16" height=3D"16" da=
+ta-emoticon-name=3D"blue-star" alt=3D"(blue star)"> Setup JWT-based auth</h=
+1>
+<h2 id=3D"SalesforceDX:ContinuousIntegrationwithTravisCI-Createaconnectedap=
+p,andconfigureitforSalesforceDX">Create a connected app, and configure it f=
+or Salesforce DX</h2>
+<p>&nbsp;To learn more about connected apps, see <a href=3D"https://help.sa=
+lesforce.com/articleView?id=3Dconnected_app_overview.htm&amp;language=3Den_=
+US" class=3D"external-link" rel=3D"nofollow">Connected Apps</a>.</p>
+<ol>
+<li><p>Log in to your org.</p></li>
+<li><p>From <img class=3D"emoticon emoticon-blue-star" data-emoji-id=3D"269=
+9" data-emoji-shortname=3D":gear:" data-emoji-fallback=3D"=E2=9A=99=EF=B8=
+=8F" src=3D"eea303eb6e2e4f29cfd60376bda1d8fd" width=3D"16" height=3D"16" da=
+ta-emoticon-name=3D"blue-star" alt=3D"(blue star)"> Setup, enter App Manage=
+r in the Quick Find box, then select <strong>App Manager</strong>.</p></li>
+<li><p>In the top-right corner, click <strong>New Connected App</strong>.</=
+p></li>
+<li><p>Update the <a href=3D"https://help.salesforce.com/articleView?id=3Dc=
+onnected_app_create_basics.htm&amp;language=3Den_US" class=3D"external-link=
+" rel=3D"nofollow">basic information</a> as needed, such as the connected a=
+pp name and your email address.</p></li>
+<li><p>Select <strong>Enable OAuth Settings</strong>.</p></li>
+<li><p>For the callback URL, enter <code>http://localhost:1717/OauthRedirec=
+t</code></p><p>If port 1717 (the default) is already in use on your local m=
+achine, specify an available one instead. Make sure to also update your sfd=
+x-project.json file by setting the oauthLocalPort property to the new port.=
+ For example, if you set the callback URL to <code>http://localhost:1919/Oa=
+uthRedirect</code></p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: java; gutter: false; theme: Confluence" data-theme=3D"Confluence">"oauthL=
+ocalPort" : "1919"</pre>=20
+</div>
+</div></li>
+<li><p>(JWT only) Select <strong>Use digital signatures</strong>.</p></li>
+<li><p>(JWT only) Click <strong>Choose File</strong> and upload the server.=
+crt file that contains your digital certificate.</p></li>
+<li><p>Add these OAuth scopes:</p>
+<ul>
+<li><p><strong>Manage user data via APIs (api)</strong></p></li>
+<li><p><strong>Manage user data via Web browsers (web)</strong></p></li>
+<li><p><strong>Perform requests at any time (refresh_token, offline_access)=
+</strong></p></li>
+</ul></li>
+<li><p>Click <strong>Save</strong>. <em>Important</em>: Make note of the co=
+nsumer key because you need it later when you run an <code>auth</code> comm=
+and.</p></li>
+<li><p>Click <strong>Manage</strong>.</p></li>
+<li><p>Click <strong>Edit Policies</strong>.</p></li>
+<li><p>In the OAuth Policies section, for the Refresh Token Policy field, c=
+lick <strong>Expire refresh token after:</strong> and enter 90 days or less=
+. Setting a maximum of 90 days for the refresh token expiration is a securi=
+ty best practice. To continue running CLI commands against an org whose ref=
+resh tokens have expired, reauthorize it with the auth:web:login or auth:jw=
+t:grant command.</p></li>
+<li><p>In the Session Policies section, set the <strong>Timeout Value</stro=
+ng> to 15 minutes. Setting a timeout for access tokens is a security best p=
+ractice. Salesforce CLI automatically handles an expired access token by re=
+ferring to the refresh token.</p></li>
+<li><p>(JWT only) In the OAuth Policies section, select <strong>Admin appro=
+ved users are pre-authorized</strong> for permitted users and click <strong=
+>OK</strong>.</p></li>
+<li><p>(JWT only) Click <strong>Save</strong>.</p></li>
+<li><p>(JWT only) Click <strong>Manage Profiles</strong> and then click <st=
+rong>Manage Permission Sets</strong>. Select the profiles and permission se=
+ts that are pre-authorized to use this connected app. Create permission set=
+s if necessary. <span class=3D"confluence-anchor-link" id=3D"SalesforceDX:C=
+ontinuousIntegrationwithTravisCI-auth"><span class=3D"confluence-anchor-lin=
+k" id=3D"auth"></span></span></p></li>
+</ol>
+<h2 id=3D"SalesforceDX:ContinuousIntegrationwithTravisCI-AuthorizeanOrgUsin=
+gtheJWTBearerFlow">Authorize an Org Using the JWT Bearer Flow</h2>
+<p><em><strong>Step 1:</strong></em> If the org you are authorizing is not =
+hosted on <code>https://login.salesforce.com</code>, update your project co=
+nfiguration file (<code>sfdx-project.json</code>).</p>
+<p>Set the <code>sfdcLoginUrl</code> parameter to the login URL. Examples o=
+f other login URLs are your custom subdomain or <code>https://test.salesfor=
+ce.com</code> for sandboxes. </p>
+<p>For example: <code>"sfdcLoginUrl": "https://test.salesforce.com"</code><=
+/p>
+<p>Alternatively, you can use the <code>--instanceurl</code> parameter of t=
+he <code>auth:jwt:grant</code> command to specify the URL. This value overr=
+ides the login URL you specified in the <code>sfdx-project.json</code> file=
+. See the next step for an example.</p>
+<p><em><strong>Step 2:</strong></em> Run the <code>auth:jwt:grant</code> CL=
+I command. Specify the client identifier from your connected app (also call=
+ed the consumer key), the path to the private key file (<code>server.key</c=
+ode>), and the JWT authentication username. When you authorize a Dev Hub or=
+g, set it as the default with the <code>--setdefaultdevhubusername</code> p=
+arameter. For example:</p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: java; gutter: false; theme: Confluence" data-theme=3D"Confluence">sfdx au=
+th:jwt:grant --clientid 04580y4051234051 \
+--jwtkeyfile /Users/jdoe/JWT/server.key --username jdoe@acdxgs0hub.org \
+--setdefaultdevhubusername --setalias my-hub-org</pre>=20
+</div>
+</div>
+<p>This example shows how to use the <code>--instanceurl</code> parameter t=
+o specify an org hosted on <code>https://test.salesforce.com</code> rather =
+than the default <code>https://login.salesforce.com</code>:</p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: java; gutter: false; theme: Confluence" data-theme=3D"Confluence">sfdx au=
+th:jwt:grant --clientid 04580y4051234051 \
+--jwtkeyfile /Users/jdoe/JWT/server.key --username jdoe@acdxgs0hub.org \
+--instanceurl https://test.salesforce.com</pre>=20
+</div>
+</div>
+<p>You can authorize a scratch org using the same client identifier (consum=
+er key) and private key file that you used to authorize its associated Dev =
+Hub org. Set the <code>--instanceurl</code> parameter to <code>https://logi=
+n.salesforce.com</code> and the <code>--username</code> parameter to the ad=
+ministrator user displayed after you create the scratch org. <span class=3D=
+"confluence-anchor-link" id=3D"SalesforceDX:ContinuousIntegrationwithTravis=
+CI-try"><span class=3D"confluence-anchor-link" id=3D"try"></span></span></p=
+>
+<h1 id=3D"SalesforceDX:ContinuousIntegrationwithTravisCI-Tryout!"><img clas=
+s=3D"emoticon emoticon-blue-star" data-emoji-id=3D"1f60e" data-emoji-shortn=
+ame=3D":sunglasses:" data-emoji-fallback=3D"=F0=9F=98=8E" src=3D"58b7e2d846=
+f92513d3fe8e219901ce4e" width=3D"16" height=3D"16" data-emoticon-name=3D"bl=
+ue-star" alt=3D"(blue star)"> Try out!</h1>
+<ul>
+<li><p>Sample <a href=3D"https://github.com/forcedotcom/sfdx-travisci-org" =
+class=3D"external-link" rel=3D"nofollow">Travis CI repo</a> for Org Develop=
+ment model</p></li>
+<li><p>Sample <a href=3D"https://github.com/forcedotcom/sfdx-travisci-packa=
+ge" class=3D"external-link" rel=3D"nofollow">Travis CI repo</a> for Package=
+ Development model</p></li>
+<li><p><a href=3D"https://github.com/forcedotcom/sfdx-travisci" class=3D"ex=
+ternal-link" rel=3D"nofollow">sfdx-travisci Sample GitHub Repo</a></p></li>
+</ul>
+<p></p>
+    </div>
+</body>
+</html>
+------=_Part_10_873203683.1675441975560
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/58b7e2d846f92513d3fe8e219901ce4e
+
+iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAolBMVEVHcEz/zE3/zE3/zE3/zE3/
+zE3/zE3/zE3/zE3/zE3/zE3/zE3/zE3/zE0pLzMpLzNfVjpfVjo2OTUpLzOHdD6UfkCvkUPKpUcp
+LzMpLzNRTDgpLzOUfkB/bj3kuEpEQzZsYDvXr0jywkuhh0K8m0V5aj1wTQW8kStmRQCMZxPZqjqf
+eB3su0PPojWDXg6pgCL1xEjGmTCWbxh5VgqziSfisz8yuoAZAAAAHnRSTlMAIGCPv9//UJ/vQK+A
+zyBgv/////////9w3//vn5+VP9sgAAACVklEQVR4AazU1bKDMBAG4EXykxxrN1hdkPd/xTNhapTJ
+1vJdryMkiOIkVThRaRJH9IZMK0wondFLosTAwyTPz/X1DdH313PTaDykn5jqx+AJ5odk0S+e9CsO
+lRk8zWTCWniJdz2NF+lAdQAdqA6gP7yPcKcMb8poJDJ4k4lGhX7xtt8ABzqdKcBi4+X+ZnNmm48w
+c1FWNUbqqiyYeRxpmeeLP3KWud+Ki3JQ8EoIW5OTB0DOOlShjf20jN2SY3YrMWx/OOzFgNXRnD6O
+RqrUAkArNWqA7PTVd0I7DIRW1ekvoAA0/rACg9IfsQOgiKJTQ6mfOLOFE1EMp/fGHQGIMzOcmBKI
+x7Q48T64Ek5CKZyjL+wAQJ65hpOSwsDKJxKOhIEiuaFtgBMrj0xywx4XpTwyice0O1w0VhyZxIYt
+blS+ZzYuhJV3MaHXvpkWavh+6gp3Ojv57jEtBBxL3p9q8KHsGkx15YFP1fZcdLgiBEIKQShKEURK
+CYJIKEYQMUUIIqIw11b/rZjBDoMgEESvth+yO4ACgv7/r1U38bLg9rLv2IRJE4y+GXn5O7BMXI2I
+/x1jopm3fVQQEKIVEwOgguQDqR8AxkVa32LWhAvWl3+j7y3hJmyzmC3gJg13Juh6liFQ2VRKIQhZ
+F7in6Knfa8ZDKHsU9hLwkKs68H2T/tpg0HTOYshowStllFFLj2PHlB5HPbaFvR6EATrqVNht066s
+/lXnali2WWpObh1Cb3zapca7ZjkVP4cq6lCOHeq614DgNWk4jSxes4/XEOU/jfmPdW7z4Q/lSsDi
+JBCyhgAAAABJRU5ErkJggg==
+------=_Part_10_873203683.1675441975560
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/09f393c94d52dabab34c3020654c7eef
+
+iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAwFBMVEVHcEwpLzMpLzMpLzMpLzMp
+LzMpLzMpLzMpLzMpLzMpLzMpLzMpLzMpLzMqMDQpLzNmdX9kZW1mdX9qWV98ZWt/Z217ZGp/Z21m
+dX9mdX9mdX9PWmJaZ3BmdX9mdX9LRUo/PUJ/Z20pLzNmdX9/Z20tMzdXZGw4QUY9Rk0yNzxicXpK
+VFxxXmQ0PEFQSU1oWF5ETlRQViuDiSFebHZPW2M/PUJZT1R6ZGnDyRR2fCSTmR4zOTFjaSdbaHFZ
+XylsciXMvCNSAAAAInRSTlMAj59g7xDfv4BAMCBwz1CvQDCAYOcgr3AQz7/Pn99Q74DPXFUnsQAA
+ArBJREFUeF7dl9d2ozAURQWoUQwpk0xvR8Ldqb3MzP//1VgxGctRMAjzNPuVtbbuvTqSFuT/QAIA
+FUHOdvMw/KOIexIBYheVhE1AdiCOo2CAigEju5FKWpneFkRh6xWY3NLd/m3p0XVCYdicuBCmlGN9
+AuZrErbncF4WhBxpfYrMZ+4wJJbonb5BTN5rPYcgHohXU9rX+hac/NRaAz7Zzzd7M6XoCX4sO9NA
+TjyAYS061nN9je/z01KXkN692SOanJQw3FxDdBcd6VOsoUln0eEJ4Jr8RQFeMWgvopYohEPU1pMC
+ALfrOf8Ni6KtKFvnKIfh4v7+AhZtRQMAq7wwDsPd+fkdLBKfs2aO/96X2bgE8HDx5wEWmUdB1Jwx
+tWQM4PHp6REWYnPhSIbCEMo8de7vsBKdwcG+rfJAYAMevPQdWWP4qqbA2XCq1OUYNtSYYinwFtzE
+gwV28d/UFRZKDZe8roxz1MMz+fK56nW0ABbYAbmO9Xg4nPm63F1hFGMzouEIXrjvYzqAKUopdKBg
+xCLiAEZjeEOd2CaBQAdC8hYszig8YfUPpx95/SvlR0DqCLqFyIV5NkdqifoSEd6XKOpLRHhfItmX
+KO24/S5OAiaj0aiLSMCiPBuqZy5nEzjI1qLFVK2ZOaKorWgyVTa/SmwStxVdKbXVRNqKqoLquuOt
+RWvDx08HBwefh2rkbFqraOd7Kz6QFWE58RBtG2YBm6C7iNH2MYq3iYjsS5S2F8ntgeOtReH2d0t0
+OmpkFxF6EiXOn0THGWUNyYWBFs2iEAZqJ9ctOEybRYNnTwRDVpeylIgGUboyhKzmhGRmHYSVUDa9
+jjTN6FubltLqc5OIYUVAYShqQp+93AJ5wzELw5qrvUDVWNJwZSfCIKuXjTNnIbkk+lcaJU3wZ0/S
+cENYm/oXSw8gglKQwQIAAAAASUVORK5CYII=
+------=_Part_10_873203683.1675441975560
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/3fb37cc2651d3d2ea05ebc098b209c94
+
+iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAilBMVEVHcEz/rDOquMKquMLBaU/B
+aU//rDP/rDPBaU/BaU/BaU+quMLBaU/BaU//rDP/rDOquMKquMLBaU+quMKquMKquMKquMKquMKq
+uMLBaU+quMKquMLBaU+8eWa2kYnBaU//rDPFbU3gi0HNdkr7qDX3pDfBaU+quMLAblauqay9eGW3
+jIGxn56trrStAA9MAAAAIHRSTlMAzxBAQDAg74DPUK8Qj2C/MM8gYCC/gJ9w7++P358gv7HhVvcA
+AAGfSURBVHja7ZjZboMwEEUnLKkhQAJZ3bQNSVo73f7/91ohkcGxsRmK1ErlvPnl6M6CNAJoxGkk
+Kg5pDL0pGBcNOCugF6hBVZ84kTAQkUOFHGMEAcNX2NsTau9WVsttLivy7XJV1YXtYVDBsFFt1fkz
+qTDzARr9CaAiaPTJrFlLjfWjMIowpIa3lwY+LwLB0izFebk08S4QbLYl0uJeGsFAyvgRfpOnxfMh
+nMTWurAyJyk02Csz3/nf7KpNeHOLIkB8iWy8a8yNlKIDgOD+5AtlAjlN5KPHA4UnmmjW5oGEJFrJ
+mgXcQhItr32Gn4m2tcgDjYgy/rzeH9BJKQtZB9qBTuwWxZrIBwPc5eHQTcRcIqaLwETCHYESo4ge
+iYFFRNiACLqLioulsIIggtdWEw+BIpJosnmyeenk5ew8IqaTshOno/2smd6VHXlWVZwl0GRSEmiK
+QCUrBxLNhxKVo2gU9RA9DCWKBxLFMJAIRpF7amz8RP6ziI2b/YtT+3NHRDZEs+mH1lG79kmnH3LS
+8tCOUeSsXfuU8xiZZ4ybf9J9AZmm30YiadnJAAAAAElFTkSuQmCC
+------=_Part_10_873203683.1675441975560
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/b763406b905ad552ce3c87e83ac6a92a
+
+iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAk1BMVEVHcEyquML/rDMpLzP/rDP/
+rDP/rDOquMJmdX+quMIpLzMpLzMpLzNmdX//rDOquMKquMKquMKquMKquMJmdX8pLzOquMKquMKq
+uMKquMKquML/rDMpLzNmdX+Mg2zZnkbGl1CzkVlweHpPW2MxOD31qTjiokG8lFTPm0vspT15fHaf
+imNIUlmDf3GWhmepjV6quMLVaXe9AAAAG3RSTlMAr78wz2AgEEDP32AggO+P73Bgn7+/gEC/MCBH
+FzdAAAABwElEQVR42u2W23KCMBRFwaqUXlSgFRAI2FZaay/5/69rp07cMAk5xKAPHddrmMXOOQkc
+58I/YRVGPv/Dj8LV0ZrY5S3c+DhNwiUSc5U350rmnqHH5x34RqZ0wTtZpAZ54FGZPNN9We+uVWc3
+iH8J3FbFe/adg6V3iLnkoN8pSLCHtNUB7DgxCYRaoHZGkVzZI5tc2rPiglRxvriAvsHhoc6q1UPF
+Q1IUiUc95RETqxEp8lEFXQV9UiReGaiXA7HeWxQTh4NsmqUIEA96liJwEQ0mmoyynowmGs10nBkw
+nnZ6ZpkRsy4T8vTN1FGfTEf5XrB1mbVp1unqMd/j6Oq8+S72tGUjB9zkQqTxvD0VoCmD5zanRdsv
+oZBkjUC06BVxJFkjECWqWaHj4f4agXSitc4CmQgEkdTzfrxoROg5zXOuFqHn5oEgQs9VsKosK6YO
+BBHd82q/WikCQUT1HB6YEAg4dM8ZHmFyIIhMqJqBbEQlRB9nF9FbO0Ox60+L9g97IMGWdV2Rmrgi
+g19asNlZfEYG/rAhlP2nFifB5uM//O8IJ4H+QQ76y6aHiJ3BEGE51tyJscZ60LIf/eyH0ROPxz8v
+k3UnBbhx5AAAAABJRU5ErkJggg==
+------=_Part_10_873203683.1675441975560
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/91ad4e2afdb89633ad70f4c54ea05ad1
+
+iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAaVBMVEVHcEzM1t3M1t3M1t3M1t3M
+1t3M1t3M1t3M1t3M1t3M1t3M1t3N197U3ePa4ujg5+zh6O3X3+XP2N/d5erQ2eDV3uTh6O3h6O3h
+6O3c5OnZ4efh6O3h6O3T3OLh6O3h6O3h6O3h6O3h6O32ToSBAAAAI3RSTlMAUJ/f/0CPv6/vcBD/
+////////////MIC///9gz/8gUO+PEGq+5IsAAAFwSURBVHgB7dZVwqswEAXgQKYuOS16L87+9/i7
+QSbINI/9FnCAZAT15EEQanqjw0A9YqPph94osS0NbJVQSCOhj/eRv9OGGJJz0sTQgnsnVrC6bnbE
+CtfXDU9L78kiqBue9H0s+wO9OeyPJ3fdrBQ6ojStdQj4uhHYsiftKUmTBFPpJHM4eQqicDbofLka
+vDHXy5kmnGaCbgY/zI3cjpOHfY8wEN3dpT51/bHBiInJ4TBRkHcDi3G+00QhRWBE5OBu2gSshHju
+MWLAMsuC0izHh3//4XA5JxHeRMnZedhFiXmRwRdT8ddf51jrwhVk02K9ym6RAhLmPG7aBjLJaIzU
+LWSi0WDLITUctQXEhiO7hNhgHaWQGyzIDGKl+iuHWPuR1tXqAx7X+QpC2cuD7CR40fkKQu0rqFM5
+vCitgpRSqa8gVfoKKnwF+Tnu0hq1Qp01/IVqa9rKdPIFabe/vbLFOR+KElId81uz2seo9eXp6RV+
+np4SmbniugAAAABJRU5ErkJggg==
+------=_Part_10_873203683.1675441975560
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/eea303eb6e2e4f29cfd60376bda1d8fd
+
+iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAMFBMVEVHcExmdX9mdX9mdX9mdX9m
+dX9mdX9mdX9mdX9mdX9mdX9mdX9mdX9mdX9mdX9mdX94+S8fAAAAEHRSTlMAUN//EEAggO8wn2Cv
+cM+PW+dFPQAAAWJJREFUeNrtmMGWgyAMRYEgxKLy/3874ywaKEZan5zZ9G7l3AUxIYnpYB394ayB
+sPQEMzkROcTjqeA+EcL/i6bwrihMRicykZvfEc2OiKPmedAOz33RzLTz0D21yVsqsL70iEnxiCkt
+9MKSxKOaIlFp8pHpAI5+9wjtPXF1fq01+idu4k4XmUxNoIuENs8v4cQgIb0AzwY2iQc3iadv2rKd
+frF50z19E+dQxDVzzyOsdUZ4U+HrnFl1j2cSOJmGVB3wqih+FpCoivizgLDmSSQk5NBS3LNR6Z/y
+2j3qEfG9dz6bE7LSD1jXrw16xZFexVLLZk7ZqMUe1qF8LsqHdYkO9adYOsCodVhn+oquXfZt4b/t
+h7wrRdCkRcpIUMsIXtjwUju2+OPPEf5A4k/2uCYCb2vwRmtU64c3o3h7PKZhx0cIfKgZMmbhgx8+
+io4bjvFxHV8g4CuNrwhbjeHLOnx9+AO4/SLPhJJxTAAAAABJRU5ErkJggg==
+------=_Part_10_873203683.1675441975560
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: file:///C:/aa13dae66192d0f614e8a5c13079d6b9
+
+iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAAwFBMVEVHcEz/7V7/6lv0fBP/7Vz/
+91//3F3/5Fv/21z/7F7/8l7/91/ydg/ydg//21z/91//yU3ydg//1lZVrO7/91//3Fj/3F3/szdV
+rO5VrO7/rDP/sjb/91/ydg//3F1VrO788GH/v0D4y1jSh03/5VT80lj/rDP/0UnBaU/hpFbuvFnK
+sVNjo9T/sTY4WXEqMzlIibpmIRPFcFCkkX+QmJqiz62zfziYv7a6yZj/517/209qtdzV0IHoeR08
+ZoX/4FEZ9ivNAAAAHHRSTlMAEGhHgOrvIL8wQJjfn9/PYI+bn7uvz6+vQL/PhUtjGgAAAtJJREFU
+eF691Gd3olAQgGFEEBEsSUzbvYVqb6m9/P9/tZPrzd5AhBmTPft+MZxwHofxqlWTbw9/LZnu96nT
+sb6TF7gAjEZK0X+5gb8v0wgYVIag4X5j+S7bDUFBg+7Y4FRCrE9+vg5jdRBziZLvIhBzPdKe+wyD
+WJ8COQyHmIM7HqNAzMMHQiDySH0EIm+J0SCGOT4V8hGoQ4U6CGRTIRuBHCrkINCQCg2x44hA1CN5
+Go/HWUSBouM6ZzDaFoM3zqDPUPbeI/wjjuMRNKj5fc3gruWokIG+dFgFBWxb9qbedSe0jNW0b1kG
+eFABdVy2V271obQDsuUGyJFs2OPHLKojIti407DQPNjEWIgHVWR62CbECGpaeAP42ERdMUA2YSC4
+MVbA7cXFrTCZ6+VoKTwUsuHGLXQBGcZcq3fCR2oLqB4SuRDtfwKJ/wodl5e7+/oYhQaC1ACFGj2K
+0yOcbL9VBGZTaFZ0Wr5FqShNVEXHotXGoDYRcrBHc4hQRyB1LGKteqdlUTushw7JkKeBZJoYwFx4
+GqB/bpeTSTqdqabpZHJpPjP6SBoqdFkaiH4CkvSzkyZmQ/RO9GLgmVTTmd7QibVfXsURaCGbRr67
+yLcVkXpfnR7iIL9MyK8QXjsvOnn7O8r5GUBJ/tfK8wSgs/N9nSMpV3MYIkkAy9WLEPOVlEd7OwqC
+cpWAFESVmt2QQRLaAFRsvpEQg8Jus54JOecMepLQfRm6l9ATg+C2sIY64FxDN/K956LzLN+72ULQ
+QZXT5R9QFEnVfXkeKNIQ1K2bByAzkrwzzp00AwFUPVOTf4aihZZKziIyELRrT2EBYqk0knFkygpQ
+WDWQgfjVhzSHPpwrrqHqkbpliF9r6XW9ftXONTdQ1b7DMmSk9do4Bqp6Nl6GjLRaGacMcRwy0maj
+ne9D240vFts9/wTiKSAKS/nPIP6ihrp64T+C9FBqHAT6Aw3hS3/tw6gJAAAAAElFTkSuQmCC
+------=_Part_10_873203683.1675441975560--

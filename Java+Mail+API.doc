@@ -1,0 +1,354 @@
+Date: Fri, 3 Feb 2023 16:32:18 +0000 (UTC)
+Message-ID: <1742163915.9.1675441938409@9847c1dbd81e>
+Subject: Exported From Confluence
+MIME-Version: 1.0
+Content-Type: multipart/related; 
+	boundary="----=_Part_8_1939840549.1675441938408"
+
+------=_Part_8_1939840549.1675441938408
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+Content-Location: file:///C:/exported.html
+
+<html xmlns:o=3D'urn:schemas-microsoft-com:office:office'
+      xmlns:w=3D'urn:schemas-microsoft-com:office:word'
+      xmlns:v=3D'urn:schemas-microsoft-com:vml'
+      xmlns=3D'urn:w3-org-ns:HTML'>
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+    <title>Java Mail API</title>
+    <!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+            <o:TargetScreenSize>1024x640</o:TargetScreenSize>
+            <o:PixelsPerInch>72</o:PixelsPerInch>
+            <o:AllowPNG/>
+        </o:OfficeDocumentSettings>
+        <w:WordDocument>
+            <w:View>Print</w:View>
+            <w:Zoom>90</w:Zoom>
+            <w:DoNotOptimizeForBrowser/>
+        </w:WordDocument>
+    </xml>
+    <![endif]-->
+    <style>
+                <!--
+        @page Section1 {
+            size: 8.5in 11.0in;
+            margin: 1.0in;
+            mso-header-margin: .5in;
+            mso-footer-margin: .5in;
+            mso-paper-source: 0;
+        }
+
+        table {
+            border: solid 1px;
+            border-collapse: collapse;
+        }
+
+        table td, table th {
+            border: solid 1px;
+            padding: 5px;
+        }
+
+        td {
+            page-break-inside: avoid;
+        }
+
+        tr {
+            page-break-after: avoid;
+        }
+
+        div.Section1 {
+            page: Section1;
+        }
+
+        /* Confluence print stylesheet. Common to all themes for print medi=
+a */
+/* Full of !important until we improve batching for print CSS */
+
+@media print {
+    #main {
+        padding-bottom: 1em !important; /* The default padding of 6em is to=
+o much for printouts */
+    }
+
+    body {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        font-size: 10pt;
+        line-height: 1.2;
+    }
+
+    body, #full-height-container, #main, #page, #content, .has-personal-sid=
+ebar #content {
+        background: #fff !important;
+        color: #000 !important;
+        border: 0 !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: auto !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+        color: #000;
+    }
+
+    #content h1,
+    #content h2,
+    #content h3,
+    #content h4,
+    #content h5,
+    #content h6 {
+        font-family: Arial, Helvetica, FreeSans, sans-serif;
+        page-break-after: avoid;
+    }
+
+    pre {
+        font-family: Monaco, "Courier New", monospace;
+    }
+
+    #header,
+    .aui-header-inner,
+    #navigation,
+    #sidebar,
+    .sidebar,
+    #personal-info-sidebar,
+    .ia-fixed-sidebar,
+    .page-actions,
+    .navmenu,
+    .ajs-menu-bar,
+    .noprint,
+    .inline-control-link,
+    .inline-control-link a,
+    a.show-labels-editor,
+    .global-comment-actions,
+    .comment-actions,
+    .quick-comment-container,
+    #addcomment {
+        display: none !important;
+    }
+
+    /* CONF-28544 cannot print multiple pages in IE */
+    #splitter-content {
+        position: relative !important;
+    }
+
+    .comment .date::before {
+        content: none !important; /* remove middot for print view */
+    }
+
+    h1.pagetitle img {
+        height: auto;
+        width: auto;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    #footer {
+        position: relative !important; /* CONF-17506 Place the footer at en=
+d of the content */
+        margin: 0;
+        padding: 0;
+        background: none;
+        clear: both;
+    }
+
+    #poweredby {
+        border-top: none;
+        background: none;
+    }
+
+    #poweredby li.print-only {
+        display: list-item;
+        font-style: italic;
+    }
+
+    #poweredby li.noprint {
+        display: none;
+    }
+
+    /* no width controls in print */
+    .wiki-content .table-wrap,
+    .wiki-content p,
+    .panel .codeContent,
+    .panel .codeContent pre,
+    .image-wrap {
+        overflow: visible !important;
+    }
+
+    /* TODO - should this work? */
+    #children-section,
+    #comments-section .comment,
+    #comments-section .comment .comment-body,
+    #comments-section .comment .comment-content,
+    #comments-section .comment p {
+        page-break-inside: avoid;
+    }
+
+    #page-children a {
+        text-decoration: none;
+    }
+
+    /**
+     hide twixies
+
+     the specificity here is a hack because print styles
+     are getting loaded before the base styles. */
+    #comments-section.pageSection .section-header,
+    #comments-section.pageSection .section-title,
+    #children-section.pageSection .section-header,
+    #children-section.pageSection .section-title,
+    .children-show-hide {
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .children-show-hide.icon {
+        display: none;
+    }
+
+    /* personal sidebar */
+    .has-personal-sidebar #content {
+        margin-right: 0px;
+    }
+
+    .has-personal-sidebar #content .pageSection {
+        margin-right: 0px;
+    }
+
+    .no-print, .no-print * {
+        display: none !important;
+    }
+}
+-->
+    </style>
+</head>
+<body>
+    <h1>Java Mail API</h1>
+    <div class=3D"Section1">
+        <p><code>* This Java program demonstrates how to download e-mail me=
+ssages and save attachment files on disk </code></p>
+<ol>
+<li><p>Read mails from Inbox (by default reads mails from old to recent)</p=
+></li>
+<li><p>Reverse/sort messages from recent to old</p></li>
+<li><p>Iterates over each mails (set the iteration message count using vari=
+able n)</p></li>
+<li><p>Set constraints using IF, to filter mails containing attachments and=
+ other required constraint</p></li>
+<li><p>Download attachments in given directory</p></li>
+<li><p>Prints the mail and attachment details</p></li>
+</ol>
+<p></p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: java; gutter: false; theme: Confluence" data-theme=3D"Confluence">package=
+ com.mail.automate.testing;
+
+import org.apache.commons.lang3.ArrayUtils;
+import javax.mail.*;
+import javax.mail.internet.MimeBodyPart;
+import java.io.File;
+import java.util.*;
+
+public class GmailFetch {
+
+    public static void main( String[] args ) throws Exception {
+
+        Session session =3D Session.getDefaultInstance(new Properties( ));
+        Store store =3D session.getStore("imaps");
+        store.connect("imap.googlemail.com", 993, "**gmail account**", "**a=
+pp pwd**");
+        Folder inbox =3D store.getFolder( "INBOX" );
+        inbox.open( Folder.READ_WRITE);
+
+        String saveDirectory =3D "**your directory**";
+
+        Message[] messages =3D inbox.getMessages();
+        ArrayUtils.reverse(messages); //add common.lang dependency to use A=
+rrayUtils
+
+        //iterate over each messages in array, given n as no of messages
+       =20
+        for (int i =3D 0, n =3D 100; i &lt; n; i++) {
+            Message message =3D messages[i];
+            Address[] fromAddress =3D message.getFrom();
+            String from =3D fromAddress[0].toString();
+            String subject =3D message.getSubject();
+            String sentDate =3D message.getSentDate().toString();
+            String contentType =3D message.getContentType();
+            String messageContent =3D "";
+           =20
+            // store attachment file name, separated by comma
+            String attachFiles =3D "";
+
+            if (contentType.contains("multipart") &amp;&amp; subject.contai=
+ns("**your constraint**")) {
+                // content may contain attachments
+                Multipart multiPart =3D (Multipart) message.getContent();
+                int numberOfParts =3D multiPart.getCount();
+                for (int partCount =3D 0; partCount &lt; numberOfParts; par=
+tCount++) {
+                    MimeBodyPart part =3D (MimeBodyPart) multiPart.getBodyP=
+art(partCount);
+                    if (Part.ATTACHMENT.equalsIgnoreCase(part.getDispositio=
+n())) {
+                        // this part is attachment
+                        String fileName =3D part.getFileName();
+                        attachFiles +=3D fileName + ", ";
+                        part.saveFile(saveDirectory + File.separator + file=
+Name);
+                        System.out.println("Message #" + (i + 1) + ":");
+                        System.out.println("\t From: " + from);
+                        System.out.println("\t Subject: " + subject);
+                        System.out.println("\t Sent Date: " + sentDate);
+                        System.out.println("\t Message: " + messageContent)=
+;
+                        System.out.println("\t Attachments: " + attachFiles=
+);
+                    }
+                }
+            }=20
+        }
+        // disconnect
+        inbox.close(false);
+        store.close();
+    }
+}</pre>=20
+</div>
+</div>
+<p></p>
+<p><span style=3D"color: rgb(7,71,166);">Required Maven Dependencies:</span=
+></p>
+<div class=3D"code panel pdl" style=3D"border-width: 1px;">
+<div class=3D"codeContent panelContent pdl">=20
+<pre class=3D"syntaxhighlighter-pre" data-syntaxhighlighter-params=3D"brush=
+: java; gutter: false; theme: Confluence" data-theme=3D"Confluence">&lt;dep=
+endencies&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;javax.mail&lt;/groupId&gt;
+            &lt;artifactId&gt;mail&lt;/artifactId&gt;
+            &lt;version&gt;1.4&lt;/version&gt;
+        &lt;/dependency&gt;
+       =20
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.apache.commons&lt;/groupId&gt;
+            &lt;artifactId&gt;commons-lang3&lt;/artifactId&gt;
+            &lt;version&gt;3.12.0&lt;/version&gt;
+        &lt;/dependency&gt;
+       =20
+&lt;/dependencies&gt;</pre>=20
+</div>
+</div>
+    </div>
+</body>
+</html>
+------=_Part_8_1939840549.1675441938408--
